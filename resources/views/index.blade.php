@@ -86,7 +86,7 @@
                 <!-- <button class="btn btn-primary mt-3">
                     update
                 </button> -->
-                <a href="updatePage/{{$lst->id}}" class="btn btn-primary mt-3">update</a>
+                <a href="updatePage/{{$lst->id}}" class="btn btn-success mt-3">update</a>
                 <a href="delete/{{$lst->id}}" class="btn btn-danger mt-3">delete</a>
 
             </span>
