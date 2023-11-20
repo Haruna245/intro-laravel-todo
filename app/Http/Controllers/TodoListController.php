@@ -35,7 +35,7 @@ class TodoListController extends Controller
         //dd($id);
         $deleted = DB::table('activity')->where('id', '=', $id)->delete();
         if($deleted){
-            return back()->with('success','activities added succesfully');
+            return back()->with('success','activities deleted succesfully');
         }else{
          return back()->with('error','something went wrong');
         }
@@ -59,5 +59,15 @@ class TodoListController extends Controller
         }else{
          return back()->with('error','something went wrong');
         }
+    }
+
+    public function updateCheckbox(Request $request){
+        $request->validate([
+            "value"=> "required|string",
+        ]);
+        $updatequery = DB::table('activity')->where('id','=',request()->id)->update([
+            'status'=> request()->value,
+        ]);
+        return response()->json(["message"=> ["value"=> $request->value]],200);
     }
 }
