@@ -18,12 +18,12 @@ use App\Models\User;
 |
 */
 
-Route::get('/', function () {
+/* Route::get('/', function () {
     return view('welcome');
-});
+}); */
 
 
-Route::get('/index',[TodoListController::class,'index']);
+Route::get('/',[TodoListController::class,'index']);
 Route::post('create',[TodoListController::class,'create']);
 Route::get('delete/{id}',[TodoListController::class,'delete']);
 Route::get('updatePage/{id}',[TodoListController::class,'updatePage']);

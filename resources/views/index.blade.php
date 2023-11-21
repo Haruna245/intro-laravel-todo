@@ -53,7 +53,8 @@
           </div>
           <div class="col-md-12">
             <label for="inputEmail4" class="form-label">Description</label>
-            <input type="text" class="form-control" id="inputEmail4" name="description">
+            <!-- <input type="text" class="form-control" id="inputEmail4" name="description" style="height:100px;"> -->
+            <textarea class="form-control" name="description" id="description" cols="30" rows="10"></textarea>
           </div>
           <div class="col-md-12">
             <label for="inputEmail4" class="form-label">Status</label>
